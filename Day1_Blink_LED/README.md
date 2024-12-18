@@ -17,10 +17,9 @@ Blink an LED light via Arduino Uno R3 circuit board
 |-----------------------|--------------|
 | Arduino Uno R3        | 1            |
 | LED                   | 1            |
-| Push Button           | 1            |
 | 220Ω Resistor         | 1            |
 | Breadboard            | 1            |
-| Jumper Wires          | A few        |
+| Jumper Wires          | 2     |
 
 ---
 
@@ -34,22 +33,14 @@ Example:
 ## Code 💻
 Here’s the code I used to achieve today’s goal:
 
-```cpp
-// Day X: Button + LED Control
-const int buttonPin = 2;  // Button connected to pin 2
-const int ledPin = 13;    // LED connected to pin 13
-int buttonState = 0;
-
+// Day 1: blink an led 
 void setup() {
-  pinMode(buttonPin, INPUT);
-  pinMode(ledPin, OUTPUT);
+  pinMode(13, OUTPUT); // Set pin 13 as an output
 }
 
 void loop() {
-  buttonState = digitalRead(buttonPin);
-  if (buttonState == HIGH) {
-    digitalWrite(ledPin, HIGH);
-  } else {
-    digitalWrite(ledPin, LOW);
-  }
+  digitalWrite(13, HIGH); // Turn the LED on
+  delay(1000);          // Wait 1 second
+  digitalWrite(13, LOW); // Turn the LED off 
+  delay(1000);   // Wait 1 second
 }
