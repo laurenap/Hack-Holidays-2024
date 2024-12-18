@@ -1,4 +1,4 @@
-# Day X: [Project Title] 🚀
+# Day 1: [Project Title] 🚀
 
 ## Objective 🎯
 [Explain what you aimed to achieve for the day.]  
