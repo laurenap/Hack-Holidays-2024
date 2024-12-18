@@ -23,25 +23,16 @@ Blink an LED light via Arduino Uno R3 circuit board
 
 ---
 
-## Circuit Diagram 🔧
+## Final Product 🔧
 [Add an image of your circuit here. You can draw this by hand or use a tool like **Fritzing**.]  
 Example:
 ![Circuit Diagram](Images/circuit_diagram.png)
 
 ---
 
-## Code 💻
-Here’s the code I used to achieve today’s goal:
-// Day 1: blink an led 
+## Code 💻  
+See Day1 Sketch dec_18 folder w/ the code!
 
-void setup() {
-  pinMode(13, OUTPUT); // Set pin 13 as an output
-}
+https://github.com/laurenap/Hack-Holidays-2024/tree/14378505ca290db7839c116cdff8892c992b8f49/Day1_Blink_LED/sketch_dec18a
 
-void loop() {
-  digitalWrite(13, HIGH); // Turn the LED on
-  delay(1000);          // Wait 1 second
-  digitalWrite(13, LOW); // Turn the LED off 
-  delay(1000);   // Wait 1 second
-}
 
