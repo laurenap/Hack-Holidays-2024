@@ -32,8 +32,8 @@ Example:
 
 ## Code 💻
 Here’s the code I used to achieve today’s goal:
-
 // Day 1: blink an led 
+
 void setup() {
   pinMode(13, OUTPUT); // Set pin 13 as an output
 }
@@ -44,3 +44,4 @@ void loop() {
   digitalWrite(13, LOW); // Turn the LED off 
   delay(1000);   // Wait 1 second
 }
+
