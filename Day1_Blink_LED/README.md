@@ -23,13 +23,6 @@ Blink an LED light via Arduino Uno R3 circuit board
 
 ---
 
-## Final Product 🔧
-[Add an image of your circuit here. You can draw this by hand or use a tool like **Fritzing**.]  
-Example:
-![Circuit Diagram](Images/circuit_diagram.png)
-
----
-
 ## Code 💻  
 See Day1 Sketch dec_18 folder w/ the code!
 
