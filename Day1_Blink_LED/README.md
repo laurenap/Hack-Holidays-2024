@@ -1,7 +1,14 @@
-# Day 1: [Blink LED] 🚀
+# Day 1: Blink LED 🚀 (wed dec18)
 
-## Objective 🎯
-"Today, I set up my Arduino Uno and successfully blinked an LED. This is my first hardware project in the Hack-Holidays challenge!"
+## Objective 🎯 
+Blink an LED light via Arduino Uno R3 circuit board
+
+## Steps 🛠️
+- Set Up Arduino Uno IDE
+- Connect Arduino Uno R3
+- Build Circuit (incl. circuit diagram)
+- Write code
+- Upload + Test
 
 ---
 
