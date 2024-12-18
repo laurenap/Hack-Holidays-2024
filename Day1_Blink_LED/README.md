@@ -1,8 +1,7 @@
-# Day 1: [Project Title] 🚀
+# Day 1: [Blink LED] 🚀
 
 ## Objective 🎯
-[Explain what you aimed to achieve for the day.]  
-Example: *"Today, I learned how to use a button to control an LED using the Arduino Uno."*
+"Today, I set up my Arduino Uno and successfully blinked an LED. This is my first hardware project in the Hack-Holidays challenge!"
 
 ---
 
