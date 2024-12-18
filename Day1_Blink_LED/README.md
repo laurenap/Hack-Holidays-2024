@@ -24,8 +24,5 @@ Blink an LED light via Arduino Uno R3 circuit board
 ---
 
 ## Code 💻  
-See Day1 Sketch dec_18 folder w/ the code!
-
-https://github.com/laurenap/Hack-Holidays-2024/tree/14378505ca290db7839c116cdff8892c992b8f49/Day1_Blink_LED/sketch_dec18a
-
+See Day1 Sketch dec_18 folder w/ the code! @ Day1_Blink_LED/sketch_dec18a
 
