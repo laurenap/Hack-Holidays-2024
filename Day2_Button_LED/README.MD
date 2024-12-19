@@ -1,8 +1,7 @@
-# Day X: [Project Title] 🚀
+# Day 2: [Button + LED Interaction] 🚀
 
 ## Objective 🎯
-[Explain what you aimed to achieve for the day.]  
-Example: *"Today, I learned how to use a button to control an LED using the Arduino Uno."*
+Today’s goal was to connect a button to my Arduino Uno and control an LED using the button’s input. This project introduced the concept of **inputs (button)** and their interaction with **outputs (LED).**
 
 ---
 
@@ -13,15 +12,10 @@ Example: *"Today, I learned how to use a button to control an LED using the Ardu
 | LED                   | 1            |
 | Push Button           | 1            |
 | 220Ω Resistor         | 1            |
+| 10kΩ Resistor         | 1            |
 | Breadboard            | 1            |
 | Jumper Wires          | A few        |
 
----
-
-## Circuit Diagram 🔧
-[Add an image of your circuit here. You can draw this by hand or use a tool like **Fritzing**.]  
-Example:
-![Circuit Diagram](Images/circuit_diagram.png)
 
 ---
 
@@ -47,3 +41,9 @@ void loop() {
     digitalWrite(ledPin, LOW);
   }
 }
+
+---
+
+## Results & Demo 📸
+	
+	•	Demo Video Link: [Add a link to your YouTube demo video.] coming soon...
