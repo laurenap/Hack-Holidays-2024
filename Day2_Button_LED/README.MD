@@ -1,4 +1,4 @@
-# Day 2: [Button + LED Interaction] 🚀
+# Day 2: Button + LED Interaction 🚀 (thurs dec19)
 
 ## Objective 🎯
 Today’s goal was to connect a button to my Arduino Uno and control an LED using the button’s input. This project introduced the concept of **inputs (button)** and their interaction with **outputs (LED).**
