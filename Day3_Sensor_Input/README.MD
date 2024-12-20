@@ -1,8 +1,8 @@
-# Day X: [Project Title] 🚀
+# Day 3: Sensor Input (fri dec20) 🚀
 
 ## Objective 🎯
 [Explain what you aimed to achieve for the day.]  
-Example: *"Today, I learned how to use a button to control an LED using the Arduino Uno."*
+Exampl
 
 ---
 
