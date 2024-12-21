@@ -13,7 +13,7 @@
 |-----------------------|--------------|
 | Arduino Uno R3        | 1            |
 | LED                   | 1            |
-| Push Button           | 1            |
+| Potentiometer         | 1            |
 | 220Ω Resistor         | 1            |
 | Breadboard            | 1            |
 | Jumper Wires          | A few        |
