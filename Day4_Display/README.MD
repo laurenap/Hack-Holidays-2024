@@ -1,8 +1,7 @@
-# Day X: [Project Title] 🚀
+# Day 4: Display Output  🚀
 
 ## Objective 🎯
-[Explain what you aimed to achieve for the day.]  
-Example: *"Today, I learned how to use a button to control an LED using the Arduino Uno."*
+Use an LCD or OLED display to help visualize the real-time value of a sensor (potentiometer)
 
 ---
 
@@ -10,10 +9,10 @@ Example: *"Today, I learned how to use a button to control an LED using the Ardu
 | **Component**        | **Quantity** |
 |-----------------------|--------------|
 | Arduino Uno R3        | 1            |
-| LED                   | 1            |
-| Push Button           | 1            |
-| 220Ω Resistor         | 1            |
+| Potentiometer         | 1            |
+| LCD (16x2) or OLED    | 1            |
 | Breadboard            | 1            |
+| I2C Module (for LCD)  | 1            |
 | Jumper Wires          | A few        |
 
 ---
@@ -28,22 +27,27 @@ Example:
 ## Code 💻
 Here’s the code I used to achieve today’s goal:
 
-```cpp
-// Day X: Button + LED Control
-const int buttonPin = 2;  // Button connected to pin 2
-const int ledPin = 13;    // LED connected to pin 13
-int buttonState = 0;
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+
+// Initialize the LCD (16 columns, 2 rows, I2C address 0x27)
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+const int potPin = A0; // Potentiometer connected to Analog Pin A0
 
 void setup() {
-  pinMode(buttonPin, INPUT);
-  pinMode(ledPin, OUTPUT);
+  lcd.begin();          // Initialize the LCD
+  lcd.backlight();      // Turn on backlight
+  pinMode(potPin, INPUT);
+  Serial.begin(9600);   // For debugging if needed
 }
 
 void loop() {
-  buttonState = digitalRead(buttonPin);
-  if (buttonState == HIGH) {
-    digitalWrite(ledPin, HIGH);
-  } else {
-    digitalWrite(ledPin, LOW);
-  }
+  int potValue = analogRead(potPin);  // Read potentiometer value
+  lcd.setCursor(0, 0);               // Set cursor to column 0, row 0
+  lcd.print("Pot Value: ");          // Display label
+  lcd.setCursor(0, 1);               // Set cursor to column 0, row 1
+  lcd.print(potValue);               // Display potentiometer value
+  delay(500);                        // Short delay
 }
+
