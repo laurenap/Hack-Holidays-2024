@@ -1,4 +1,4 @@
-# Day 4: Display Output  🚀
+# Day 4: Display Output (sat dec21) 🚀
 
 ## Objective 🎯
 Use an LCD or OLED display to help visualize the real-time value of a sensor (potentiometer)
