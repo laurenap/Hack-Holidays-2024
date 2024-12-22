@@ -27,6 +27,8 @@ Example:
 ## Code 💻
 Here’s the code I used to achieve today’s goal:
 
+```cpp
+
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 
