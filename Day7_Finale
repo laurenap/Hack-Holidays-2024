@@ -1,0 +1,109 @@
+# Day 7: Final Project - Interactive Feedback System 🚀
+
+## **Objective 🎯**
+For the final day of Hack-Holidays, I built an interactive feedback system that combines multiple inputs and outputs:
+- A **potentiometer** adjusts the position of a **servo motor**.
+- A **button** toggles an LED on or off.
+- A **buzzer** provides sound feedback when thresholds are crossed.
+- An **LCD** displays real-time sensor values and system state.
+
+This project demonstrates my ability to integrate sensors, actuators, and displays into a cohesive system.
+
+---
+
+## **Components Used 🛠️**
+| **Component**          | **Quantity** |
+|-------------------------|--------------|
+| Arduino Uno R3          | 1            |
+| Potentiometer           | 1            |
+| Servo Motor             | 1            |
+| LED                     | 1            |
+| 220Ω Resistor           | 1            |
+| Button                  | 1            |
+| Buzzer                  | 1            |
+| LCD (16x2) + I2C Module | 1            |
+| Breadboard              | 1            |
+| Jumper Wires            | A few        |
+
+---
+
+## **Circuit Diagram 🔧**
+*(Add a Fritzing diagram or a hand-drawn circuit diagram here.)*
+
+---
+
+## **Code 💻**
+Here’s the Arduino code for the final project:
+
+```cpp
+#include <Servo.h>
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+
+// Initialize components
+Servo myServo;
+LiquidCrystal_I2C lcd(0x27, 16, 2);  // LCD with I2C address 0x27
+
+const int potPin = A0;  // Potentiometer connected to Analog Pin A0
+const int servoPin = 9; // Servo connected to PWM pin 9
+const int ledPin = 13;  // LED connected to Digital Pin 13
+const int buttonPin = 2; // Button connected to Digital Pin 2
+const int buzzerPin = 8; // Buzzer connected to Digital Pin 8
+
+bool ledState = false;  // LED toggle state
+int potValue = 0;       // Potentiometer reading
+int servoAngle = 0;     // Servo angle
+
+void setup() {
+  // Initialize components
+  myServo.attach(servoPin);
+  pinMode(ledPin, OUTPUT);
+  pinMode(buttonPin, INPUT);
+  pinMode(buzzerPin, OUTPUT);
+
+  // Initialize LCD
+  lcd.begin();
+  lcd.backlight();
+
+  // Start serial communication for debugging
+  Serial.begin(9600);
+}
+
+void loop() {
+  // Read potentiometer value and map it to servo angle
+  potValue = analogRead(potPin);
+  servoAngle = map(potValue, 0, 1023, 0, 180);
+  myServo.write(servoAngle);
+
+  // Read button state and toggle LED
+  if (digitalRead(buttonPin) == HIGH) {
+    ledState = !ledState;  // Toggle LED state
+    digitalWrite(ledPin, ledState ? HIGH : LOW);
+    delay(200);  // Debounce delay
+  }
+
+  // Trigger buzzer if potentiometer value crosses threshold
+  if (potValue > 800) {
+    digitalWrite(buzzerPin, HIGH);
+    delay(100);
+    digitalWrite(buzzerPin, LOW);
+  }
+
+  // Update LCD with sensor values
+  lcd.setCursor(0, 0);
+  lcd.print("Pot: ");
+  lcd.print(potValue);
+  lcd.print("  ");
+  lcd.setCursor(0, 1);
+  lcd.print("Servo: ");
+  lcd.print(servoAngle);
+  lcd.print("  ");
+
+  // Debugging via Serial Monitor
+  Serial.print("Pot Value: ");
+  Serial.print(potValue);
+  Serial.print(" | Servo Angle: ");
+  Serial.println(servoAngle);
+
+  delay(100);  // Short delay for stability
+}
