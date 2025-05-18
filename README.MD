@@ -51,5 +51,5 @@ Daily updates, videos, and reflections will be posted as I tackle each project!
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/YOUR-USERNAME/Hack-Holidays-2024.git
+   git clone https://github.com/laurenap/Hack-Holidays-2024.git
    cd Hack-Holidays-2024
